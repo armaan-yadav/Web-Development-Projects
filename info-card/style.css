@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.wrapper {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.red {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: linear-gradient(-25deg, #d84869, #f46641);
+  box-shadow: 0 0 50px #d84869;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  animation: circle-red 10s infinite ease-in-out;
+}
+@keyframes circle-red {
+  50% {
+    top: 10%;
+    left: 25%;
+    scale: 1.11;
+  }
+}
+.blue {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: linear-gradient(-25deg, #5648d8, #8641f4);
+  box-shadow: 0 0 50px #5648d8;
+  position: absolute;
+  top: 70%;
+  left: 55%;
+  animation: circle-blue 10s infinite ease-in-out;
+}
+@keyframes circle-blue {
+  50% {
+    top: 75%;
+    left: 60%;
+    scale: 1.11;
+  }
+}
+
+.card {
+  height: 450px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 330px;
+  z-index: 5;
+  padding: 20px 0;
+  border-radius: 5%;
+}
+.card-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 40px 0;
+}
+.card-img img {
+  /* border-radius: 50%; */
+  clip-path: circle();
+  height: 130px;
+}
+.card-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+}
+.card-desig {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff85;
+  font-weight: 500;
+  padding: 20px 0;
+}
+
+.card-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  padding: 20px 30px;
+}
+
+.card-btn {
+  width: 45%;
+  height: 30px;
+  border: 1px solid #ffffff85;
+  background: none;
+  color: #ffffff85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s;
+}
+#card-share {
+  fill: #ffffff85;
+  height: 1rem;
+}
+.card-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* overlay start */
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(143, 143, 143, 0.3);
+  visibility: hidden;
+  /* top: -100%; */
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal {
+  height: 200px;
+  width: 400px;
+  background-color: rgba(6, 6, 6, 1);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.modal-heading {
+  color: white;
+  font-size: 27px;
+  padding: 20px 10px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.modal-heading button {
+  background: none;
+  color: white;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  font-size: 25px;
+}
+.modal-subHeading{
+  color: white;
+  margin-top: 20px;
+  font-size: 15px;
+  padding: 5px 0 5px 20px;
+}
+.modal-links {
+  margin-top: 10px;
+}
+.icons a {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.icons a i {
+  font-size: 23px;
+  transition: color 0.3s;
+  transition: scale 0.3s;
+}
+.icons a:hover i {
+  color: white;
+  scale: 1.1;
+}
+.icons a:hover {
+  transition: background-color 0.3s ease-in-out;
+}
+.icons a:nth-child(1) {
+  color: #1877f2;
+  border-color: #b7d4fb;
+}
+.icons a:nth-child(1):hover {
+  background-color: #1877f2;
+}
+.icons a:nth-child(2) {
+  color: #46c1f6;
+  border-color: #b6e7fc;
+}
+.icons a:nth-child(2):hover {
+  background-color: #46c1f6;
+}
+.icons a:nth-child(3) {
+  color: #25d366;
+  border-color: #bef4d2;
+}
+.icons a:nth-child(3):hover {
+  background-color: #25d366;
+}
+.icons a:nth-child(4) {
+  color: #e1306c;
+  border-color: #f5bccf;
+}
+.icons a:nth-child(4):hover {
+  background-color: #e1306c;
+}
+.icons a:nth-child(5) {
+  color: #0088cc;
+  border-color: #b3e6ff;
+}
+.icons a:nth-child(5):hover {
+  background-color: #0088cc;
+}
