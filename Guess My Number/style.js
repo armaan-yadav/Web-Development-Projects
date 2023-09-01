@@ -37,7 +37,7 @@ check.addEventListener("click", function () {
     // Winning Effect //
     message.textContent = "Congrats..You Won!!! :D";
     document.querySelector("body").style.backgroundColor = "green";
-    if (hScore.textContent <= score.textContent || hScore.textContent == '0') {
+    if (hScore.textContent <= score.textContent || hScore.textContent == "0") {
       hScore.textContent = score.textContent;
     }
     // Next Round //
@@ -52,3 +52,11 @@ function again() {
   number = generateRandomNumber(maximum, minimum);
   guess.value = "";
 }
+
+// Enter fuctionality ..
+guess.addEventListener("keyup", function (event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    check.click();
+  }
+});
