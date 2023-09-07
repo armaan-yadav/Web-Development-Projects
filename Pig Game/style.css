@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+}
+/* Layout Start  */
+main {
+  height: 60rem;
+  width: 100rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.344);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.35);
+}
+/* Layout End */
+
+/* Section editing start */
+.player {
+  height: 100%;
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 60px;
+  transition: all 0.75s;
+}
+
+.player_name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  padding-top: 10px;
+  color: #333;
+  transition: all 0.75s;
+}
+.player_score {
+  padding-top: 20px;
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.current {
+  width: 20rem;
+  background-color: #c7365f;
+  height: 12rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.758);
+  padding: 15px;
+  transition: all 0.75s;
+  margin-bottom: 15px;
+}
+.current-heading {
+  font-weight: 100;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.current-score {
+  padding-top: 5px;
+  font-size: 3.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.908);
+}
+/* Section Editing End */
+
+/* Active PLayer Decoration START */
+.player--active {
+  background-color: rgba(255, 255, 255, 0.344);
+}
+.player--active .player_name {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.744);
+}
+/* Active PLayer Decoration END*/
+
+/* Absolute position elemetnts Start */
+.btn {
+  position: absolute;
+  top: 0;
+  padding: 10px 25px;
+  font-size: 1.75rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+.btn:active {
+  transform: translateY(2px);
+}
+.btn-new {
+  top: 4rem;
+}
+.btn-roll {
+  top: 39rem;
+}
+.btn-hold {
+  top: 46rem;
+}
+/* Absolute position elemetnts End */
+
+/* Dice Start */
+.dice {
+  /* display: none; */
+  position: absolute;
+  height: 10rem;
+  top: 15rem;
+}
+/* Dice End */
+.hidden {
+  display: none;
+}
+/* PLayer Winnner */
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .player_name {
+  font-weight: 900;
+  color: #c7365f;
+}
