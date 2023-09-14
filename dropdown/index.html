@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop Down</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dropdown/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="logo">
+          My Logo
+
+          <div id="toggle"></div>
+        </div>
+        <div class="options">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="#" id="dropdown">
+                DropDown
+                <i
+                  class="ri-arrow-drop-down-line"
+                  id="d"
+                  style="color: white"
+                ></i>
+              </a>
+              <ul id="dropdown-list">
+                <li><a href="#">Product 1</a></li>
+                <li><a href="#">Product 2</a></li>
+                <li>
+                  <a href="#" id="product3"
+                    >Product 3
+
+                    <i
+                      class="ri-arrow-drop-down-line"
+                      id="p"
+                      style="color: white"
+                    ></i>
+                  </a>
+                  <ul id="product3-list">
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">Mango</a></li>
+                    <li><a href="#">Banana</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#" id="blog"
+                >Blog
+
+                <i
+                  class="ri-arrow-drop-down-line"
+                  id="b"
+                  style="color: white"
+                ></i>
+              </a>
+              <ul id="blog-list">
+                <li><a href="#">Blog Link 1</a></li>
+                <li><a href="#">Blog Link 2</a></li>
+                <li><a href="#">Blog Link 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/dropdown/script.js"></script>
+  </body>
+</html>

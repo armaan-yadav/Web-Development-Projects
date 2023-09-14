@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 66px;
+  height: fit-content;
+  color: white;
+  background-color: #00a8fd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.options ul {
+  position: relative;
+}
+.options ul li {
+  position: relative;
+  list-style: none;
+  float: left;
+  transition: 0.4s all ease-in-out;
+}
+.options ul li a {
+  color: white;
+  font-size: 1.1rem;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.4s all ease-in-out;
+}
+.options ul li a:hover {
+  background-color: #2b93e3;
+}
+
+.nav .logo {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.options ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background-color: #00a8fd;
+  display: none;
+}
+.options ul li:hover ul {
+  display: block;
+}
+
+.options ul li ul li {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+#product3-list {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+.options ul li ul li:nth-child(3):hover #product3-list {
+  display: block;
+}
+#toggle {
+  background-color: green;
+  height: 50px;
+  width: 40px;
+  display: none;
+}
+
+/* ResponsiveNess */
+@media (max-width: 900px) {
+  .nav {
+    background-color: #333;
+    flex-direction: column;
+    padding: 0;
+  }
+  .logo {
+    padding: 0 25px;
+    width: 100%;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .options {
+    width: 100%;
+    display: none;
+  }
+  .options ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .options ul li {
+    width: 100%;
+  }
+  .options ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  #product3-list {
+    /* background-color: green; */
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+  #toggle {
+    background-color: #fff;
+    width: 40px;
+    height: 3px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+  }
+  #toggle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background-color: #fff;
+    transform: translateY(-12px);
+  }
+  #toggle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background-color: #fff;
+    transform: translateY(12px);
+  }
+  .active .logo #toggle::before {
+    transform: rotate(45deg);
+  }
+  .active .logo #toggle::after {
+    transform: rotate(135deg);
+  }
+  .active .logo #toggle {
+    height: 0;
+  }
+}
