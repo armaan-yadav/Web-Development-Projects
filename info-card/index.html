@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Stella</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script
+      src="https://kit.fontawesome.com/66b3abc150.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="red"></div>
+      <div class="blue"></div>
+
+      <!-- CARD -->
+      <div class="card">
+        <div class="card-img"><img src="/download.jpg" alt="" /></div>
+        <div class="card-heading">John Stella</div>
+        <div class="card-desig">Founder,GitHelp</div>
+        <div class="card-buttons">
+          <button class="card-btn card-share">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              style="color: white"
+              id="card-share"
+            >
+              <path
+                d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"
+              />
+            </svg>
+            Share My Profile
+          </button>
+          <button class="card-btn card-follow">Follow Me</button>
+        </div>
+      </div>
+      <!--Overlay -->
+      <div class="overlay" >
+        <div class="modal">
+          <div class="modal-heading">
+            <p>Share My Profile</p>
+            <button onclick="removeOverlay()">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-subHeading">
+           <p>Share this via</p>
+          </div>
+          <div class="modal-links">
+            <ul class="icons">
+              <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+
+              <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+
+              <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="#">
+                <i class="fa-brands fa-telegram-plane"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/style.js"></script>
+    <script
+      src="https://kit.fontawesome.com/607fefc85f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
